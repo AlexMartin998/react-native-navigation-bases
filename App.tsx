@@ -1,10 +1,12 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 
 export const App = () => {
   return (
-    <View>
+    // Navigation already has a SafeAreaView
+    <NavigationContainer>
       <Text>App</Text>
-    </View>
+    </NavigationContainer>
   );
 };
