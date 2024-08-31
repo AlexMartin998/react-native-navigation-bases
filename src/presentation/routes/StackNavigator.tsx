@@ -10,7 +10,15 @@ const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      // Customizar el header de la app
+      screenOptions={{
+        headerShown: true, // x default
+        headerStyle: {
+          elevation: 0,
+          shadowColor: 'transparent',
+        },
+      }}>
       <Stack.Screen name={NavigationRoutesEnum.home} component={HomeScreen} />
       <Stack.Screen
         name={NavigationRoutesEnum.products}
