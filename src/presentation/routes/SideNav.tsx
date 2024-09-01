@@ -8,9 +8,9 @@ import {
 import React from 'react';
 import {StyleSheet, useWindowDimensions, View} from 'react-native';
 
-import {StackNavigator} from '.';
 import {globalColors} from '../../config/theme/theme';
 import {ProfileScreen} from '../screens/profile/ProfileScreen';
+import {BottomTabsNavigator} from './BottomTabsNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -40,7 +40,11 @@ export const SideNav = () => {
           paddingHorizontal: 20,
         },
       }}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
+      <Drawer.Screen
+        name="BottomTabsNavigator"
+        component={BottomTabsNavigator}
+      />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );

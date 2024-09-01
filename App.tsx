@@ -3,7 +3,7 @@ import './src/config/navigation/gesture-handler.native';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 
-// drawernavigator
+// drawer navigator
 import {SideNav} from './src/presentation/routes/SideNav';
 
 export const App = () => {
@@ -12,6 +12,10 @@ export const App = () => {
     <NavigationContainer>
       {/* <StackNavigator /> */}
       <SideNav />
+
+
+      {/* lo podria mostrar aqui, pero seria el unico navigator, en esta app quiero q este bottom navigator sea accesible a traves de mi Drawer Navigato */}
+      {/* <BottomTabsNavigator /> */}
     </NavigationContainer>
   );
 };
