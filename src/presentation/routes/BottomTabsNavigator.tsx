@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 
 // react-navigation -> tabs
@@ -7,8 +8,8 @@ import {Text} from 'react-native';
 
 import {globalColors} from '../../config/theme/theme';
 import {Tab1Screen} from '../screens/tabs/Tab1Screen';
-import {Tab2Screen} from '../screens/tabs/Tab2Screen';
-import {Tab3Screen} from '../screens/tabs/Tab3Screen';
+import {StackNavigator} from './StackNavigator';
+import {TopTabsNavigator} from './TopTabsNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +53,7 @@ export const BottomTabsNavigator = () => {
           title: 'Tab2',
           tabBarIcon: ({color}) => <Text style={{color}}>Tab2</Text>,
         }}
-        component={Tab2Screen}
+        component={TopTabsNavigator}
       />
       <Tab.Screen
         name="Tab3"
@@ -60,7 +61,7 @@ export const BottomTabsNavigator = () => {
           title: 'Tab3',
           tabBarIcon: ({color}) => <Text style={{color}}>Tab3</Text>,
         }}
-        component={Tab3Screen}
+        component={StackNavigator}
       />
     </Tab.Navigator>
   );

@@ -1,6 +1,6 @@
-import React from 'react';
-import {NavigationProp} from '@react-navigation/native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import React, {useEffect} from 'react';
 
 import {HomeScreen} from '../screens/home/HomeScreen';
 import {ProductScreen} from '../screens/products/ProductScreen';
@@ -19,6 +19,16 @@ export type NavigationRootPropType = NavigationProp<RootStackParams>;
 const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
+  // hide Bottom tab navigator header in this stack screen to only show the stack header in this tab (bottom tab navigator)
+  const navigator = useNavigation<NavigationRootPropType>();
+
+  useEffect(() => {
+    navigator.setOptions({
+      headerShown: false,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Stack.Navigator
       // Customizar el header de la app
