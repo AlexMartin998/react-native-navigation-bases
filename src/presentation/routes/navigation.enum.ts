@@ -1,5 +1,6 @@
 export enum NavigationRoutesEnum {
-  home = 'Home',
-  products = 'Products',
-  settings = 'Settings',
+  home = 'HomeScreen',
+  products = 'ProductsScreen',
+  product = 'ProductScreen',
+  settings = 'SettingsScreen',
 }

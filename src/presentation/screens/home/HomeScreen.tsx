@@ -6,11 +6,11 @@ import {useNavigation} from '@react-navigation/native';
 
 import {GlobalStyles} from '../../../config/theme/theme';
 import {PrimaryButton} from '../../components/shared';
-import {NavigationRoutesEnum} from '../../routes';
+import {NavigationRootPropType, NavigationRoutesEnum} from '../../routes';
 
 export const HomeScreen = () => {
   // navigation
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationRootPropType>();
 
   return (
     <View style={GlobalStyles.container}>
@@ -18,16 +18,12 @@ export const HomeScreen = () => {
         <PrimaryButton
           label="Products"
           // navigate by name in StackNavigator
-          onPress={() =>
-            navigation.navigate(NavigationRoutesEnum.products as never)
-          }
+          onPress={() => navigation.navigate(NavigationRoutesEnum.products)}
         />
 
         <PrimaryButton
           label="Settings"
-          onPress={() =>
-            navigation.navigate(NavigationRoutesEnum.settings as never)
-          }
+          onPress={() => navigation.navigate(NavigationRoutesEnum.settings)}
         />
       </View>
     </View>

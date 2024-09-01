@@ -19,6 +19,12 @@ export const GlobalStyles = StyleSheet.create({
     backgroundColor: globalColors.background,
   },
 
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
   primaryButton: {
     backgroundColor: globalColors.primary,
     padding: 10,
