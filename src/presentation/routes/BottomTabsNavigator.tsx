@@ -15,6 +15,7 @@ const Tab = createBottomTabNavigator();
 export const BottomTabsNavigator = () => {
   return (
     <Tab.Navigator
+      //* custom styles ---------------------
       sceneContainerStyle={{
         backgroundColor: globalColors.white,
       }}

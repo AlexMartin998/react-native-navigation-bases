@@ -42,7 +42,7 @@ export const SideNav = () => {
       }}>
       {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
       <Drawer.Screen
-        name="BottomTabsNavigator"
+        name="Bottom Tabs Navigator"
         component={BottomTabsNavigator}
       />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
