@@ -79,6 +79,7 @@ export const ProductsScreen = () => {
         renderItem={({item}) => <ProductsCard {...item} />}
       />
 
+      {/* es empujado hasta el fondo x el flatList */}
       <Text style={GlobalStyles.title}>Settings</Text>
       <PrimaryButton
         label="Ajustes"

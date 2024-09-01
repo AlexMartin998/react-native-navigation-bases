@@ -8,6 +8,7 @@ export const globalColors = {
   warning: '#ffba08',
   danger: '#e71d36',
   dark: '#22223b',
+  white: '#edf2f4',
 
   background: '#f5f5f5',
 };
