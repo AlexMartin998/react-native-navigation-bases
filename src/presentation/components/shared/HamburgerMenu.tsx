@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
-
 import {DrawerActions, useNavigation} from '@react-navigation/native';
-import {Pressable, Text} from 'react-native';
+import React, {useEffect} from 'react';
+import {Pressable} from 'react-native';
+
+import {globalColors} from '../../../config/theme/theme';
+import {IonIcons} from './IonIcons';
 
 export const HamburgerMenu = () => {
   ///* hamburger menu ---------------------
@@ -18,7 +20,9 @@ export const HamburgerMenu = () => {
 };
 
 const HeaderLeftComponent = ({navigation}: {navigation: any}) => (
-  <Pressable onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-    <Text>Menu</Text>
+  <Pressable
+    style={{marginLeft: 10}}
+    onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+    <IonIcons name="menu-outline" size={24} color={globalColors.primary} />
   </Pressable>
 );

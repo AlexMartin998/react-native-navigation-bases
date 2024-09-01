@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 import {HamburgerMenu} from '../../components/shared/HamburgerMenu';
+import {IonIcons} from '../../components/shared/IonIcons';
 
 export const Tab1Screen = () => {
   return (
@@ -9,6 +10,8 @@ export const Tab1Screen = () => {
       <HamburgerMenu />
 
       <Text>Tab1Screen</Text>
+
+      <IonIcons name="airplane-outline" color="red" />
     </View>
   );
 };
